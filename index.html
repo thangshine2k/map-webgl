@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Grab Mapbox</title>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet"/>
+
+  <style>
+    body { margin: 0; }
+
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #searchBox {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 300px;
+      z-index: 10;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    #suggestions {
+      background: #fff;
+      color: #000;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .suggestion {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .suggestion:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div id="searchBox">
+  <input id="searchInput" placeholder="Tìm địa điểm..." />
+  <div id="suggestions"></div>
+</div>
+<script src="config.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
